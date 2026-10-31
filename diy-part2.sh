@@ -4,10 +4,9 @@
 # 设置主机名
 sed -i 's/OpenWrt/K3-Router/g' package/base-files/files/bin/config_generate
 
-# 安装额外软件包
+# 安装额外软件包（PassWall 已移除，原因见 diy-part1.sh 注释）
 ./scripts/feeds install luci-app-adguardhome
 ./scripts/feeds install luci-app-zerotier
 ./scripts/feeds install luci-app-tailscale
-./scripts/feeds install luci-app-passwall
 
 echo "DIY script done!"
